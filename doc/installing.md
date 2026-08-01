@@ -2,9 +2,9 @@
 Instructions for getting set up with SYCL-HD.
 
 ## Dependencies
-The only necessary tool to compile the SYCL-HD library is to have a SYCL-capable compiler installed.
+The only necessary tools to compile the SYCL-HD library are a SYCL-capable compiler + OpenBLAS (lapack.h)
 
-There are two main choices for this:
+Two SYCL compilers are supported:
 - Intel's Data Parallel C++ 
 - AdaptiveCpp
 
@@ -61,4 +61,12 @@ and then in your CMake project simply use the find_package command:
 ```CMake
 find_package(SYCL-HD REQUIRED)
 target_link_libraries(my_target PRIVATE syclhd)
+```
+
+## Docker
+
+You may get started with using the library via docker. You may have to customize the container to enable gpu support.
+
+```bash
+sh .vscode/setup_acpp_img.sh
 ```
