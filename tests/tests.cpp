@@ -19,11 +19,16 @@ void print_test_device() {
               << std::endl;
 
     std::cout << "CPU device: " << cl::sycl::queue{cl::sycl::cpu_selector_v}.get_device().get_info<cl::sycl::info::device::name>() << std::endl;
-    //std::cout << "GPU device: " << cl::sycl::queue{cl::sycl::gpu_selector_v}.get_device().get_info<cl::sycl::info::device::name>() << std::endl;
+
+    try {
+        std::cout << "GPU device: " << cl::sycl::queue{cl::sycl::gpu_selector_v}.get_device().get_info<cl::sycl::info::device::name>() << std::endl;
+    } catch(std::exception) {
+        std::cout << "Could not find GPU device " << std::endl;
+    }
+
 }
 
 int main(int argc, char **argv) {
-    print_test_device();
     testing::InitGoogleTest(&argc, argv);
     auto r = RUN_ALL_TESTS();
     print_test_device();
