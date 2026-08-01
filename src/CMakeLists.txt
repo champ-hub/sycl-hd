@@ -59,7 +59,7 @@ add_library(syclhd STATIC
     ${sycl_hd_lse_headers}
 )
 
-target_link_libraries(syclhd PRIVATE openblas)
+target_link_libraries(syclhd PRIVATE openblas LAPACK::LAPACK)
 target_link_directories(syclhd PRIVATE ${OpenBLAS_LIBRARY_DIRS} ${LAPACK_LIBRARY_DIRS})
 
 add_sycl_to_target(TARGET syclhd SOURCES 

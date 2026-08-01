@@ -19,7 +19,7 @@ void print_test_device() {
               << std::endl;
 
     std::cout << "CPU device: " << cl::sycl::queue{cl::sycl::cpu_selector_v}.get_device().get_info<cl::sycl::info::device::name>() << std::endl;
-    std::cout << "GPU device: " << cl::sycl::queue{cl::sycl::gpu_selector_v}.get_device().get_info<cl::sycl::info::device::name>() << std::endl;
+    //std::cout << "GPU device: " << cl::sycl::queue{cl::sycl::gpu_selector_v}.get_device().get_info<cl::sycl::info::device::name>() << std::endl;
 }
 
 int main(int argc, char **argv) {

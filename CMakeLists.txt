@@ -16,11 +16,8 @@ ENDIF()
 ### Find OpenBLAS ###
 set(BLA_VENDER OpenBLAS)
 find_package(BLAS REQUIRED)
-if(BLAS_FOUND)
-    message("OpenBLAS found.")
-    message(STATUS "BLAS LIBRARIES:  ${BLAS_LIBRARIES}")
-    include_directories(/usr/local/include/openblas/)
-endif(BLAS_FOUND)
+find_package(LAPACK REQUIRED)
+
 
 ### Making project variables available in code ###
 add_definitions(-DPROJECT_PATH_CMAKE=\"${PROJECT_SOURCE_DIR}\")
