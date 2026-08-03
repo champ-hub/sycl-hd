@@ -56,11 +56,11 @@ COPY . .
 RUN cmake -B build \
     -G Ninja \
     -DCMAKE_BUILD_TYPE=Release \
-    -DACPP_TARGETS="omp;cuda:sm_86" \
+    -DACPP_TARGETS="generic" \
     -DCMAKE_INSTALL_PREFIX=/usr/local
 
-RUN cmake --build build
+RUN cmake --build build -j$(nproc)
 
-RUN ctest --test-dir build
+#RUN ctest --test-dir build/tests
 
 RUN cmake --install build

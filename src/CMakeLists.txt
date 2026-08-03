@@ -72,14 +72,14 @@ add_sycl_to_target(TARGET syclhd SOURCES
 )
 
 target_include_directories(syclhd PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>  # Used for builds
-    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>                            # Used for installs
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>   # Used for builds
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}> # Used for installs
 )
 
 set_target_properties(syclhd PROPERTIES
     VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_VERSION_MAJOR}
-    PUBLIC_HEADER syclhd.hpp
+    PUBLIC_HEADER include/syclhd.hpp
 )
 
 include(CMakePackageConfigHelpers)
