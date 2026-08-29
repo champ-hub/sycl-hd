@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "SYCL-HD"
+message: "If you use SYCL-HD in your research, please cite the accompanying HeteroPar 2026 paper."
+type: software
+
+authors:
+  - family-names: Caires
+    given-names: Pedro
+  - family-names: Ilic
+    given-names: Aleksandar
+  - family-names: Sousa
+    given-names: Leonel
+
+preferred-citation:
+  type: conference-paper
+  title: "SYCL-HD: Parallel Framework for Hyperdimensional Computing"
+  authors:
+    - family-names: Caires
+      given-names: Pedro
+    - family-names: Ilic
+      given-names: Aleksandar
+    - family-names: Sousa
+      given-names: Leonel
+  year: 2026
+  booktitle: "Proceedings of the 24th International Workshop on Algorithms, Models and Tools for Parallel Computing on Heterogeneous Platforms (HeteroPar 2026)"
+  publisher: "Springer"
+  series: "Lecture Notes in Computer Science"
