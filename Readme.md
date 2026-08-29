@@ -5,6 +5,21 @@ SYCL-HD is developed with the aim of efficiently and robustly running tasks base
 - __Beginner Friendly__: Beginner users can code with the library without extensive knowlegde of SYCL and C++. 
 - __Powerful__: SYCL-HD gives experienced users a convenient way to manage Hypervector buffers, so you can write the optimized kernels for your application, with minimal hassle.
 
+## Citation
+
+If you use **SYCL-HD** in your research, please cite:
+
+```bibtex
+@inproceedings{caires2026syclhd,
+  title     = {SYCL-HD: Parallel Framework for Hyperdimensional Computing},
+  author    = {Pedro Caires and Aleksandar Ilic and Leonel Sousa},
+  booktitle = {Proceedings of the 24th International Workshop on Algorithms, Models and Tools for Parallel Computing on Heterogeneous Platforms (HeteroPar 2026)},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  year      = {2026}
+}
+```
+
 ## Installing
 The library is built with CMake allowing it to be easily integrated into your workflow. Check [here](doc/installing.md) for detailed instructions on how to install
 
